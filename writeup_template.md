@@ -65,9 +65,11 @@ It seems like certain classes such as 0 and >40 are underrepresented compared to
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-The input image is first converted into grayscale. Then a simple transform of pixel_new = (pixel-128)/128 is operated as a mean-subtraction and normalization procedure. Here is an example of a traffic sign image before and after preprocessing.
+The input image is first converted into grayscale. Then a simple transform of pixel_new = (pixel-128)/128 is operated as a mean-subtraction and normalization procedure. Below is an example of a traffic sign image before and after preprocessing. Note that the squeeze in color range.
 
-![alt text][image2]
+![alt text][im_before]
+
+![alt text][im_after]
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
