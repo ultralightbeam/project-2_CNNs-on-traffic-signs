@@ -1,1 +1,4 @@
 /lib
+/backup
+/share/*
+.DS_Store
