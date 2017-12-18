@@ -150,7 +150,7 @@ For the first image (speed limit of 30km/h image), the model is very confident o
 | 1.9E-31	      		| Speed limit (70km/h)					 				|
 | 1.6E-35				| Speed limit (50km/h)      							|
 
-It is noteworthy that the contending candidates have epsilon probability but are mostly speed limit signs.
+It is intuitive that even though the contending candidates have epsilon probabilities, they are mostly speed limit signs.
 
 For the second image (no entry image), the model is very confident of its decision. 
 
@@ -162,4 +162,39 @@ For the second image (no entry image), the model is very confident of its decisi
 | 1.2E-24	      			| Turn left ahead					 				|
 | 9.8E-28				    | Stop      							|
 
+
+For the third image (speed limit of 70km/h image), the model is very confident of its decision. 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.9997         			| Speed limit (70km/h)   							| 
+| 2.3E-04     				| Speed limit (20km/h) 										|
+| 4.0E-13					| Keep left											|
+| 4.3E-17	      			| Roundabout mandatory					 				|
+| 1.2E-21				    | General caution      							|
+
+
+
+For the fourth image (stop image), the model is very confident of its decision. 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.9997         			| Stop   							| 
+| 2.9E-04     				| Speed limit (80km/h) 										|
+| 1.2E-05					| Speed limit (60km/h)											|
+| 6.0E-07	      			| Turn left ahead					 				|
+| 5.6E-07				    | Road work      							|
+
+The next best ones are speed limits. Possibly because the zeros in 80, 60 match the letter 'O' in stop sign? 
+
+
+For the fifth image (turn right ahead image), the model is very confident of its decision. 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| ~1.0         			| Turn right ahead   							| 
+| 4.9E-23     				| Speed limit (20km/h) 										|
+| 1.5E-26					| Roundabout mandatory											|
+| 1.2E-26	      			| Ahead only					 				|
+| 2.1E-29				    | Traffic signals      							|
 
