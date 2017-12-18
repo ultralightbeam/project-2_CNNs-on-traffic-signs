@@ -35,7 +35,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used basic numpy functions to compute statistics of data in cell 9:
+I used basic numpy functions to compute statistics of data in the notebook:
 
 * The size of training set is 34799
 * The size of the validation set is 4410
@@ -133,7 +133,7 @@ Our CNN model was able to hit 100% accuracy for this very small test set.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code can be found in cell 30 of notebook. Below we show charts of top-5 prediction probabilities, and claim the  test images are classified by our model extremely confidently.
+Below we show charts of top-5 prediction probabilities, and claim the  test images are classified by our model extremely confidently. These results can also be found in notebook as inline print.
 
 For the first image (speed limit of 30km/h image), the model is very confident of its decision. The top five soft max probabilities were
 
