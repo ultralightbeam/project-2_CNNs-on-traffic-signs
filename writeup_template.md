@@ -45,7 +45,7 @@ I used basic numpy functions to compute statistics of data in the notebook:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-We grab the first sample in the training dataset for a quick understanding of data types.
+We grab the first sample in each class of the training dataset for a quick understanding of data types.
 
 ![Sample from each class][image_all]
 
