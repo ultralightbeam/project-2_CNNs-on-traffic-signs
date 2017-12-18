@@ -60,7 +60,7 @@ Below is a simple graph showing the percentage of classes in the dataset. This i
 
 ![Is there a bias][image_bias]
 
-It seems like certain classes such as 0 and >40 are underrepresented compared to classes such as 1~4, consistently in the training, validation, and eval datasets. Thus, we can expect better detection performance for classes of 1~4 than 0, for example.
+It seems like certain classes such as 0 and >40 are underrepresented compared to classes such as 1--4, consistently in the training, validation, and eval datasets. Thus, we can expect better detection performance for classes of 1--4 than 0, for example.
 
 ### Design and Test a Model Architecture
 
@@ -107,6 +107,8 @@ My final model results were:
 
 The LeNet-5 CNN architecture was chosen as the baseline, since it gave high-performance results in MNIST classification, which is a similar image classification problem to what we are dealing with here. To adapt LeNet-5 to a robust traffic sign classifier, modifications included the grayscale preprocessing, changing #(output nodes) to 43, and retuning hyperparameters to hit 93% validation accuracy See plot below of how validation accuracy grows (with some randomness due to gradient descent being stochastic) with epoch number.
 
+
+![alt text][valid]
 
 
 ### Test a Model on New Images
