@@ -67,6 +67,8 @@ The input image is first converted into grayscale. Then a simple transform of pi
 
 ![alt text][im_after]
 
+The normalization is done here for easy porting of standard NN architectures -- because existing NN architectures commonly assume normalization of data, the normalization eliminates the need for tuning hyperparameters from scratch.
+
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
@@ -116,6 +118,7 @@ Below are the five German traffic signs found on Google Images (rescaled to 32x3
 ![alt text][im1] ![alt text][im2] ![alt text][im3] 
 ![alt text][im4] ![alt text][im5]
 
+We conjecture that our model would classify these five images robustly, as they avoid the known hard classification scenarios, where the images may be taken at night, through haze/fog, or even partially occluded by other objects (e.g. tall cars, birds).
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
