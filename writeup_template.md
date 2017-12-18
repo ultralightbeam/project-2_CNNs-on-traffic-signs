@@ -19,6 +19,7 @@ The goals / steps of this project are the following:
 [image_bias]: ./examples/distribution.png "dist"
 [im_before]: ./examples/im_before.png "before"
 [im_after]: ./examples/im_after.png "after"
+[valid]: ./examples/valid.png "v"
 [im1]: ./examples/im1.png "im1"
 [im2]: ./examples/im2.png "im2"
 [im3]: ./examples/im3.png "im3"
@@ -55,17 +56,17 @@ We grab the first sample in the training dataset for a quick understanding of da
 
 We notice from this plot that in some cases the classification may be hard due to low-light conditions.
 
-Below is a simple graph showing the percentage of classes in the dataset. This is almost a necessary check of data bias (e.g. underrepresentation/overrepresentation of certain classes) before jumping into serious ML since. 
+Below is a simple graph showing the percentage of classes in the dataset. This is almost a necessary check of data bias (e.g. underrepresentation/overrepresentation of certain classes) before jumping into serious ML. 
 
 ![Is there a bias][image_bias]
 
-It seems like certain classes such as 0 and >40 are underrepresented compared to classes such as 1~4, consistently in the training, validation, and eval datasets.
+It seems like certain classes such as 0 and >40 are underrepresented compared to classes such as 1~4, consistently in the training, validation, and eval datasets. Thus, we can expect better detection performance for classes of 1~4 than 0, for example.
 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-The input image is first converted into grayscale. Then a simple transform of pixel_new = (pixel-128)/128 is operated as a mean-subtraction and normalization procedure. Below is an example of a traffic sign image before and after preprocessing. Note that the squeeze in color range.
+The input image is first converted into grayscale. Then a simple transform of pixel_new = (pixel-128)/128 is operated as a mean-subtraction and normalization procedure. Below is an example of a traffic sign image before and after preprocessing. Note that the offset and squeeze in color range from preprocessing.
 
 ![alt text][im_before]
 
@@ -90,7 +91,6 @@ My CNN architecture borrows the standard LeNet-5, but with #(output nodes) modif
 | Fully connected		| 120 -> 84 nodes								|
 | RELU                  |                                               |
 | Fully connected		| 84 -> 43 nodes								|
-|						|												|
  
 
 
@@ -105,7 +105,9 @@ My final model results were:
 * validation set accuracy of 94.5% 
 * test set accuracy of 92.4%
 
-The LeNet-5 CNN architecture was chosen as the baseline since it enjoyed success in MNIST classification, which is a similar image classification problem that we are dealing with here. To adapt LeNet-5 to a robust traffic sign classifier, modifications included the preprocessing, changing #(output nodes) to 43, and retuning hyperparameters to hit 93% validation accuracy.  
+The LeNet-5 CNN architecture was chosen as the baseline, since it gave high-performance results in MNIST classification, which is a similar image classification problem to what we are dealing with here. To adapt LeNet-5 to a robust traffic sign classifier, modifications included the grayscale preprocessing, changing #(output nodes) to 43, and retuning hyperparameters to hit 93% validation accuracy See plot below of how validation accuracy grows (with some randomness due to gradient descent being stochastic) with epoch number.
+
+
 
 ### Test a Model on New Images
 
