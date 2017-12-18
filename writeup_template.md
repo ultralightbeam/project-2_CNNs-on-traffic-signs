@@ -60,7 +60,7 @@ Below is a simple graph showing the percentage of classes in the dataset. This i
 
 ![Is there a bias][image_bias]
 
-It seems like certain classes such as 0 and >40 are underrepresented compared to classes such as 1--4, consistently in the training, validation, and eval datasets. Thus, we can expect better detection performance for classes of 1--4 than 0, for example.
+It seems like certain classes such as 0 and >40 are underrepresented compared to classes such as 1-4, consistently in the training, validation, and eval datasets. Thus, we can expect better detection performance for classes of 1-4 than 0, for example.
 
 ### Design and Test a Model Architecture
 
