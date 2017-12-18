@@ -3,8 +3,6 @@
 ## Writeup
 
 
----
-
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -19,6 +17,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 [image_all]: ./examples/all_signs.png "all_signs"
 [image_bias]: ./examples/distribution.png "dist"
+[im_before]: ./examples/im_before.png "before"
+[im_after]: ./examples/im_after.png "after"
 [im1]: ./examples/im1.png "im1"
 [im2]: ./examples/im2.png "im2"
 [im3]: ./examples/im3.png "im3"
