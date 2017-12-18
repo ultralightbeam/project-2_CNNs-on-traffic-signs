@@ -138,17 +138,28 @@ Our CNN model was able to hit 100% accuracy for this very small test set.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code can be found in cell 30 of notebook. 
+The code can be found in cell 30 of notebook. Below we show charts of top-5 prediction probabilities, and claim the  test images are classified by our model extremely confidently.
 
-For the first image, the model is very confident of its decision. The top five soft max probabilities were
+For the first image (speed limit of 30km/h image), the model is very confident of its decision. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Speed limit (30)   							| 
-| .20     				| No entry 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| ~1.0         			| Speed limit (30km/h)   							| 
+| 4.4E-21               | Speed limit (20km/h) 										|
+| 9.9E-29				| Turn right ahead											|
+| 1.9E-31	      		| Speed limit (70km/h)					 				|
+| 1.6E-35				| Speed limit (50km/h)      							|
+
+It is noteworthy that the contending candidates have epsilon probability but are mostly speed limit signs.
+
+For the second image (no entry image), the model is very confident of its decision. 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| ~1.0         			| No entry   							| 
+| 8.6E-22     				| Turn right ahead 										|
+| 2.8E-23					| Yield											|
+| 1.2E-24	      			| Turn left ahead					 				|
+| 9.8E-28				    | Stop      							|
 
 
-For the second image ... 
